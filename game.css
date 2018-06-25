@@ -33,6 +33,7 @@ h1 {
 }
 
 .player-container {
+    display: none;
 }
 
 .clerfix::after {
