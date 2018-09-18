@@ -26,6 +26,8 @@ var hod = function(adress, num){
             adress.classList.add('color-1')
             player = 2;
             mas[num] = 3;
+            
+            
         } else {
             adress.innerHTML = 'O';
             player2.classList.remove('h2-active');
@@ -34,26 +36,47 @@ var hod = function(adress, num){
             adress.classList.add('color-2');
             player = 1;
             mas[num] = 5;
+            
+            
         }
-
+        
+        isWin();
     } 
-    
-    if (isWin() == 1) {
-        alert('Победил игрок 1');
-    } else if (isWin() == 2){
-        alert('Победил игрок 2');
-    };
         
 }
 
 var isWin = function(){
-    if (mas[0] + mas[1] + mas[2] == 9) {
-        var winer = 1;
-        return winer;
-    } else if ((mas[0] + mas[1] + mas[2] == 15)){
-        var winer = 2;
-        return winer;
-    }
+    
+    for (var i = 0; i < 9; i = i+3) {
+        if (mas[i] + mas[i + 1] + mas[i + 2] == 9) {
+        winCongratulations(1);
+        } else if ((mas[i] + mas[i + 1] + mas[i + 2] == 15)){
+            winCongratulations(2);
+        }    
+    };
+    
+    for (var i = 0; i < 3; i++) {
+        if (mas[i] + mas[i + 3] + mas[i + 6] == 9) {
+        winCongratulations(1);
+        } else if ((mas[i] + mas[i + 3] + mas[i + 6] == 15)){
+            winCongratulations(2);
+        }    
+    };
+    
+    console.log(mas[0] + mas[4] + mas[8]);
+    if (mas[0] + mas[4] + mas[8] == 9) {
+        winCongratulations(1);
+    }; 
+    if (mas[0] + mas[4] + mas[8] == 15) {
+        winCongratulations(2);
+    }; 
+    
+    if (mas[2] + mas[4] + mas[6] == 9){
+        winCongratulations(1);
+    }; 
+    if (mas[2] + mas[4] + mas[6] == 15){
+        winCongratulations(2);
+    };    
 }
 
 
@@ -62,3 +85,12 @@ for (var i=0; i< td.length; i++){
     
 }
 
+var restart = function() {
+    window.location.reload();
+}
+
+var winCongratulations = function(winer) {
+    h1.innerHTML = "Победил игрок " + winer;
+    h1.classList.add("win-message");
+    document.querySelector("table").classList.add("end-math");
+}

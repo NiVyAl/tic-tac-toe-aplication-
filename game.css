@@ -2,6 +2,8 @@ body {
     font-family: sans-serif;
     background-color: #1f3a93;
     color: white;
+    
+    overflow-x: hidden;
 }
 
 table {
@@ -9,6 +11,7 @@ table {
     border-collapse: collapse;
     font-size: 50px;
     text-transform: uppercase;
+    transition: 0.5s ease all;
 }
 
 td {
@@ -30,21 +33,26 @@ tr:last-child td {
 
 h1 {
     text-align: center;
+    transition: 0.5s ease all;
 }
 
 .player-container {
+    
 }
 
-.clerfix::after {
+.clearfix::after {
     content: "";
     display: table;
     clear: both;
 }
 
 h2 {
-    float: left;
     padding-left: 70px;
     color: #898989;
+}
+
+h2:first-child {
+    float: left;
 }
 
 h2:last-child {
@@ -67,4 +75,43 @@ span {
 
 .color-2 {
     color: #f62459;
+}
+
+.button-restart {
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    border: 2px solid white;
+    background-color: #1f3a93;
+    color: white;
+    font-size: 15px;
+}
+
+.button-restart:hover {
+    color: #1f3a93;
+    background-color: white;
+}
+
+.win-message {
+    transform: scale(2) translateY(100px)
+}
+
+.end-math {
+    transform: scale(0.8);
+    filter: blur(10px);
+    position: relative;
+}
+
+.end-math::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
