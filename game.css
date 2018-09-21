@@ -4,6 +4,10 @@ body {
     color: white;
 }
 
+.none {
+    display: none;
+}
+
 table {
     margin: 80px auto;
     border-collapse: collapse;
@@ -11,13 +15,14 @@ table {
     text-transform: uppercase;
 }
 
+
 td {
     border-bottom: 10px solid white;
     text-align: center;
-    cursor: pointer;
+    //cursor: pointer;
     width: 100px;
     height: 100px;
-    box-sizing: border-box;
+    /box-sizing: border-box;
 }
 
 tr:last-child td {
@@ -61,10 +66,48 @@ span {
     color: white;
 }
 
-.color-1 {
+.color-1::after {
     color: #36dbd7;
 }
 
-.color-2 {
+.color-2::after {
     color: #f62459;
+}
+
+.cheesman::after {
+    text-transform: uppercase;
+    font-size: 45px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+h1::after {
+    content: "x";
+}
+
+table .cheesman {
+    line-height: 90px;
+}
+
+
+table label {
+    width: 100%;
+    height: 100%;
+    /background-color: red;
+    display: block;
+    /opacity: 0.25;
+    cursor: pointer;
+}
+
+#position-0:checked ~ table tr td label[for="position-0"]::after, 
+#position-1:checked ~ table tr td label[for="position-1"]::after, 
+#position-2:checked ~ table tr td label[for="position-2"]::after,
+#position-3:checked ~ table tr td label[for="position-3"]::after,
+#position-4:checked ~ table tr td label[for="position-4"]::after,
+#position-5:checked ~ table tr td label[for="position-5"]::after,
+#position-6:checked ~ table tr td label[for="position-6"]::after,
+#position-7:checked ~ table tr td label[for="position-7"]::after,
+#position-8:checked ~ table tr td label[for="position-8"]::after {
+    /background-color: green;
+    content: "x";
 }
