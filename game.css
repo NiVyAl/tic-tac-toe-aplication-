@@ -4,7 +4,7 @@ body {
     color: white;
 }
 
-.none {
+.position-input {
     display: none;
 }
 
@@ -66,12 +66,14 @@ span {
     color: white;
 }
 
-.color-1::after {
+.player-1::after {
     color: #36dbd7;
+    content: "x";
 }
 
-.color-2::after {
+.player-2::after {
     color: #f62459;
+    content: "o";
 }
 
 .cheesman::after {
@@ -79,10 +81,11 @@ span {
     font-size: 45px;
     vertical-align: middle;
     font-weight: bold;
+    display: none;
 }
 
 h1::after {
-    content: "x";
+    display: inline-block !important;
 }
 
 table .cheesman {
@@ -108,6 +111,5 @@ table label {
 #position-6:checked ~ table tr td label[for="position-6"]::after,
 #position-7:checked ~ table tr td label[for="position-7"]::after,
 #position-8:checked ~ table tr td label[for="position-8"]::after {
-    /background-color: green;
-    content: "x";
+    display: block;
 }

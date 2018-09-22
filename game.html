@@ -6,40 +6,40 @@
         <link href="game.css" rel="stylesheet">
     </head>
     <body>
-        <h1 class="cheesman color-1">Ход игрока </h1>
-        <input type="checkbox" class="none" id="position-0">
-        <input type="checkbox" class="none" id="position-1">
-        <input type="checkbox" class="none" id="position-2">
-        <input type="checkbox" class="none" id="position-3">
-        <input type="checkbox" class="none" id="position-4">
-        <input type="checkbox" class="none" id="position-5">
-        <input type="checkbox" class="none" id="position-6">
-        <input type="checkbox" class="none" id="position-7">
-        <input type="checkbox" class="none" id="position-8">
+        <h1 class="cheesman player-1">Ход игрока </h1>
+        <input type="checkbox" class="position-input" id="position-0">
+        <input type="checkbox" class="position-input" id="position-1">
+        <input type="checkbox" class="position-input" id="position-2">
+        <input type="checkbox" class="position-input" id="position-3">
+        <input type="checkbox" class="position-input" id="position-4">
+        <input type="checkbox" class="position-input" id="position-5">
+        <input type="checkbox" class="position-input" id="position-6">
+        <input type="checkbox" class="position-input" id="position-7">
+        <input type="checkbox" class="position-input" id="position-8">
         
         <table>     
             <tr>
-                <td class="border"><label for="position-0" class="cheesman color-1"></label></td>
-                <td class="border"><label for="position-1" class="cheesman color-1"></label></td>
-                <td><label for="position-2" class="cheesman color-1"></label></td>
+                <td class="border"><label for="position-0" class="cheesman player-1"></label></td>
+                <td class="border"><label for="position-1" class="cheesman player-1"></label></td>
+                <td><label for="position-2" class="cheesman player-1"></label></td>
             </tr>
             <tr>
-                <td class="border"><label for="position-3" class="cheesman color-1"></label></td>
-                <td class="border"><label for="position-4" class="cheesman color-1"></label></td>
-                <td><label for="position-5" class="cheesman color-1"></label></td>
+                <td class="border"><label for="position-3" class="cheesman player-1"></label></td>
+                <td class="border"><label for="position-4" class="cheesman player-1"></label></td>
+                <td><label for="position-5" class="cheesman player-1"></label></td>
             </tr>
             <tr>
-                <td class="border"><label for="position-6" class="cheesman color-1"></label></td>
-                <td class="border"><label for="position-7" class="cheesman color-1"></label></td>
-                <td><label for="position-8" class="cheesman color-1"></label></td>
+                <td class="border"><label for="position-6" class="cheesman player-1"></label></td>
+                <td class="border"><label for="position-7" class="cheesman player-1"></label></td>
+                <td><label for="position-8" class="cheesman player-1"></label></td>
             </tr>
         </table>
         
         <div class="player-container clearfix">
-            <h2 class="player-1 h2-active">Игрок 1 <span>- X</span></h2>
-            <h2 class="player-2">Игрок 2 <span>- O</span></h2>
+            <h2 class="h2-active">Игрок 1 <span>- X</span></h2>
+            <h2 class="">Игрок 2 <span>- O</span></h2>
         </div>
         
-        <!-- <script src="game.js"></script> -->
+        <script src="changeLabel.js"></script>
     </body>
 </html>
